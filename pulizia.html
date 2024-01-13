@@ -1,0 +1,64 @@
+<!-- PAROLE IN SCORRIMENTO -->
+        <!-- <div class="container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide scorrimento" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    LOVE
+                </div>
+                <div class="carousel-item">
+                    DESPAIR
+                </div>
+                <div class="carousel-item">
+                    CRY
+                </div>
+                <div class="carousel-item">
+                    RUN
+                </div>
+                <div class="carousel-item">
+                    DESTROY
+                </div>
+                <div class="carousel-item cc">
+                    JUST BREATH
+                </div>
+                <div class="carousel-item">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+        <!-- parole che cambiano ogni 2 secondi -->
+        <!-- <div class="text-container scorrimento">
+        <span id="text"></span>
+    </div> -->
+
+    <script>
+
+        $('.carousel').carousel({
+            interval: 2000
+        });
+    </script>
+
+<script>
+
+    // logica per switch parole ogni 2 secondi
+    document.addEventListener("DOMContentLoaded", function () {
+        const words = ["LOVE", "DESPAIR", "CRY", "RUN", "DESTROY", "JUST", "BREATH"];
+        const textElement = document.getElementById("text");
+        let index = 0;
+
+        function displayNextWord() {
+            textElement.textContent = words[index];
+            index = (index + 1) % words.length;
+        }
+
+        displayNextWord();
+
+        setInterval(displayNextWord, 200);
+    });
+</script>

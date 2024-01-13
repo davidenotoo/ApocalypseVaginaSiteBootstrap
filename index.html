@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apopcalypse Vagina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- favicon -->
+    <link rel="icon" href="img/icon/favicon.ico">
+
+    <!-- preload del font -->
+    <link rel="stylesheet" type="text/css" href="https://db.onlinewebfonts.com/t/db8811fcaea2386d4f6e3bcf7e6d206b.woff">
+
+    <!-- Manifest per PWA -->
+    <link rel="manifest" href="manifest.json">
+
+
+    <style>
+        /* import del font */
+        @font-face {
+            font-family: 'MiedingerW01-Bold';
+            src: url('https://db.onlinewebfonts.com/t/db8811fcaea2386d4f6e3bcf7e6d206b.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ll {
+            cursor: default;
+        }
+
+        .ll:hover {
+            color: inherit;
+        }
+
+        .ll:visited {
+            color: inherit;
+        }
+
+        .bg-custom {
+            background-color: #000;
+            /* Colore di base */
+            font-family: 'MiedingerW01-Bold', sans-serif !important;
+            color: white;
+            transition: background-color 0.5s ease;
+            /* Aggiunto effetto di transizione */
+            opacity: 1;
+            /* Opacità iniziale */
+        }
+
+        .bg-custom.scrolled {
+            background-color: #a6ff00;
+            /* Colore finale */
+            opacity: 0.8;
+            /* Opacità finale */
+        }
+
+
+
+        .video {
+            padding-top: 70px;
+            padding-bottom: 10vh;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 70px;
+        }
+
+        .scorrimento {
+            text-align: center;
+            font-family: 'MiedingerW01-Bold', sans-serif !important;
+            color: white;
+            font-size: 40px;
+
+        }
+
+        .card {
+            background-color: #1b1f22;
+            color: #dee2e6;
+            margin: 10px;
+            padding: 2px;
+        }
+
+        .gradient2 {
+            background: linear-gradient()
+        }
+
+        /* Stile della sezione del mini player Spotify */
+        #mini-player-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #spotify-player {
+            margin-top: 10vh;
+            margin-bottom: 100px;
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        .carousel-indicators {
+            color: #a6ff00;
+        }
+
+        /* PC */
+        @media (min-width: 768px) {
+            .navbar-brand img {
+                width: 60px;
+                height: 48px;
+            }
+
+            .bb {
+                font-size: 40px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                color: white;
+                padding-top: 15px;
+            }
+
+            .video {
+                padding-top: 110px;
+            }
+
+            /* rimozione del curisor pointer automatico */
+            .bb:hover {
+                cursor: default;
+            }
+
+            .navbar-secondary {
+                margin-top: 26px;
+                border: none;
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+
+
+        /* SMARTPHONE */
+        @media (max-width: 767px) {
+
+            .bb {
+                font-size: 18px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+
+            .cc {
+                font-size: 30px;
+            }
+
+            .navbar-secondary {
+                margin-top: -17px;
+            }
+        }
+
+        #mini-player-section {
+            margin: 0px;
+            /* Puoi regolare questo valore in base alle tue esigenze */
+        }
+
+        #spotify-player {
+            border-radius: 12px;
+            width: 100%;
+            height: 200px;
+            /* Puoi regolare questo valore in base alle tue esigenze */
+        }
+
+
+        .logo-color {
+            color: white;
+            /* Colore del testo iniziale */
+        }
+
+        .bg-scroll {
+            background-color: #9dff00 !important;
+            color: #000;
+            /* Colore dello sfondo durante lo scrolling */
+        }
+
+        .navbar-secondary {
+            background-color: #000;
+            font-family: 'MiedingerW01-Bold', sans-serif !important;
+            color: white;
+            transition: background-color 0.5s ease;
+            opacity: 1;
+            position: fixed;
+            top: 70px;
+            /* Altezza della barra di navigazione principale */
+            width: 100%;
+            z-index: 1000;
+            /* Assicura che la nuova barra sia sopra la barra principale */
+        }
+
+        .navbar-secondary.scrolled {
+            background-color: #a6ff00;
+            opacity: 0.8;
+        }
+
+        /* Stili per i pulsanti della nuova barra di navigazione */
+        .navbar-secondary .btn-primary {
+            background-color: #000;
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+
+        .navbar-secondary.scrolled .btn-primary {
+            background-color: #a6ff00;
+        }
+
+        /* Stili per i pulsanti della nuova barra di navigazione */
+        .navbar-secondary .btn-primary {
+            background-color: #000;
+            color: white;
+            transition: background-color 0.5s ease;
+            border: none;
+            /* Rimuovi il bordo */
+        }
+
+        .navbar-secondary.scrolled .btn-primary {
+            background-color: #a6ff00;
+        }
+
+        /* Stili per la stringa nella barra di navigazione principale e nella nuova barra di navigazione */
+        .navbar .navbar-brand,
+        .navbar-secondary .navbar-brand {
+            color: white;
+            /* Colore iniziale del testo */
+            transition: color 0.5s ease;
+            /* Aggiunto effetto di transizione */
+        }
+
+        /* Cambiamento del colore del testo quando avviene lo scrolling */
+        .navbar.scrolled .navbar-brand,
+        .navbar-secondary.scrolled .navbar-brand {
+            color: #000 !important;
+            /* Colore finale del testo */
+        }
+
+
+        /* Stili per la barra di navigazione principale e la nuova barra di navigazione */
+        .navbar,
+        .navbar-secondary {
+            transition: height 0.5s ease, margin-top 0.5s ease;
+            /* Aggiunta transizione per l'altezza e margin-top */
+        }
+
+        /* Altezza iniziale della barra di navigazione principale e della nuova barra di navigazione */
+        .navbar,
+        .navbar-secondary {
+            height: 70px;
+            margin-top: 0px;
+            /* Margin-top iniziale */
+        }
+
+        /* Altezza ridotta e margin-top quando avviene lo scrolling e lo sfondo diventa #a6ff00 */
+        .navbar.scrolled,
+        .navbar-secondary.scrolled {
+            height: 50px;
+            /* Altezza ridotta */
+            margin-top: 0px;
+            /* Regola questo valore in base alle tue esigenze */
+        }
+
+        .navbar-secondary.scrolled {
+            margin-top: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra di navigazione principale -->
+    <nav class="navbar navbar-expand-lg bg-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand bb ll" href="#">
+                Apocalypse Vagina
+            </a>
+        </div>
+    </nav>
+
+    <!-- Nuova barra di navigazione -->
+    <nav class="navbar navbar-expand-lg navbar-secondary">
+        <!-- Aggiungi i tuoi bottoni qui -->
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='#sezione1'">music</button>
+                <button type="button" class="btn btn-primary">dates</button>
+                <button type="button" class="btn btn-primary">contacts</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- VIDEO -->
+    <video src="video/videoRuotato.mp4" class="video" autoplay muted playsinline></video>
+
+
+    <!-- FOTO 1 e 2 -->
+    <img src="img/photo/6.JPG" class="img-fluid" alt="img6">
+    <img src="img/photo/7.JPG" class="img-fluid" alt="img7">
+
+
+    <!-- player di SPOTIFY -->
+    <section id="sezione1"></section>
+    <div id="mini-player-section music" class="embed-responsive embed-responsive-16by9">
+        <iframe id="spotify-player"
+            src="https://open.spotify.com/embed/album/1Kvnyu1qqE80Dik6rB3m7X?utm_source=generator&theme=0"
+            class="embed-responsive-item" frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+
+    <!-- TESTO1 -->
+    <!-- Apocalypse Vagina is electronic music
+        Apocalypse Vagina is not only about music
+        It's about the emotions of our fragile generation, marked by uncertainty, yet unbroken and capable
+        of
+        rebirth
+        We are in connection with all the souls out there who have experienced a personal apocalypse
+        We want to inject new energy to emerge from this, as life is a place where one can always be born
+        again -->
+
+
+    <!-- TESTO2 -->
+    <!-- Our music is a fusion of analog synth and computer music, inspired by Jungle,
+    Techno,
+    Future Bass, Dark Synth, and Ambient. Our live performance, composed by analog synthesizers, drum
+    set
+    and controllers, transports listeners to a dystopian dimension though deep harmonics, contrasted by
+    the
+    rhythmic foundations that exude energy and confiden -->
+
+    <br><br><br><br><br><br>
+
+
+    <!-- IMMAGINI -->
+    <img src="img/photo/1.JPG" class="img-fluid" alt="img1">
+    <img src="img/photo/2.JPG" class="img-fluid" alt="img2">
+    <img src="img/photo/3.JPG" class="img-fluid" alt="img3">
+    <img src="img/photo/4.JPG" class="img-fluid" alt="img4">
+    <img src="img/photo/5.JPG" class="img-fluid" alt="img5">
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.querySelector(".navbar");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 180) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.querySelector(".navbar");
+            var navbarSecondary = document.querySelector(".navbar-secondary");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 180) {
+                    navbarSecondary.classList.add("scrolled");
+                } else {
+                    navbarSecondary.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
