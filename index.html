@@ -32,6 +32,26 @@
             justify-content: center;
         }
 
+        /* Stile del "track" della barra di scorrimento (lo sfondo) */
+        ::-webkit-scrollbar {
+            width: 12px;
+            /* Larghezza della barra di scorrimento */
+        }
+
+        /* Stile del "thumb" della barra di scorrimento (la parte mobile) */
+        ::-webkit-scrollbar-thumb {
+            background-color: #bfbfbf;
+            /* Colore della barra di scorrimento */
+            border-radius: 10px;
+            /* Bordo arrotondato */
+        }
+
+        /* Stile del "track" della barra di scorrimento (lo sfondo) */
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            /* Colore trasparente */
+        }
+
         .ll {
             cursor: default;
         }
@@ -50,9 +70,7 @@
             font-family: 'MiedingerW01-Bold', sans-serif !important;
             color: white;
             transition: background-color 0.5s ease;
-            /* Aggiunto effetto di transizione */
             opacity: 1;
-            /* Opacità iniziale */
         }
 
         .bg-custom.scrolled {
@@ -62,14 +80,11 @@
             /* Opacità finale */
         }
 
-
-
         .video {
             padding-top: 70px;
             padding-bottom: 10vh;
             width: 100%;
             height: 100%;
-
         }
 
         .container {
@@ -169,7 +184,8 @@
             .navbar-secondary {
                 margin-top: -17px;
             }
-            .video{
+
+            .video {
                 padding-top: 20vh;
             }
         }
@@ -285,6 +301,10 @@
         .navbar-secondary.scrolled {
             margin-top: -20px;
         }
+
+        .marg {
+            margin-bottom: 50vh;
+        }
     </style>
 </head>
 
@@ -305,7 +325,7 @@
         <div class="container-fluid d-flex justify-content-center">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-primary" onclick="window.location.href='#sezione1'">music</button>
-                <button type="button" class="btn btn-primary">dates</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='#sezione2'">dates</button>
                 <button type="button" class="btn btn-primary">contacts</button>
             </div>
         </div>
@@ -313,8 +333,11 @@
 
 
     <!-- VIDEO -->
-    <video src="video/videoRuotato.mp4" class="video" autoplay muted playsinline></video>
+    <video src="video/videoRuotato.mp4" class="video" autoplay muted playsinline loop></video>
 
+
+    <!-- LOGO -->
+    <!-- <img src="img/loghi/logo_bianco.png" class="img-fluid" alt="img1"> -->
 
     <!-- FOTO 1 e 2 -->
     <img src="img/photo/6.JPG" class="img-fluid" alt="img6">
@@ -344,14 +367,57 @@
 
     <!-- TESTO2 -->
     <!-- Our music is a fusion of analog synth and computer music, inspired by Jungle,
-    Techno,
-    Future Bass, Dark Synth, and Ambient. Our live performance, composed by analog synthesizers, drum
-    set
-    and controllers, transports listeners to a dystopian dimension though deep harmonics, contrasted by
-    the
-    rhythmic foundations that exude energy and confiden -->
+            Techno,
+            Future Bass, Dark Synth, and Ambient. Our live performance, composed by analog synthesizers, drum
+            set
+            and controllers, transports listeners to a dystopian dimension though deep harmonics, contrasted by
+            the
+            rhythmic foundations that exude energy and confiden -->
 
-    <br><br><br><br><br><br>
+
+    <!-- DATES EVENTI -->
+    <section id="sezione2" class="text-white py-5 marg">
+        <div class="container text-center">
+            <!-- Evento 1 -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h2>22 LUG 2023</h2>
+                    <div class="border-bottom pb-3">
+                        <h4>NUVALA FEST</h4>
+                        <p>Masseria Cimadomo, Puglia, Italy</p>
+                        <a href="#" class="text-white">DETAILS</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h2>31 FEB 2023</h2>
+                    <div class="border-bottom pb-3">
+                        <h4>MARE FESTIVAL</h4>
+                        <p>Cretto di Burri, Sicily, Italy</p>
+                        <a href="#" class="text-white">DETAILS</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Evento 3 -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h2>Coming Soon</h2>
+                    <div class="border-bottom pb-3">
+                        <h4>???</h4>
+                        <p>?</p>
+                        <a href="#" class="text-white">Stay Tuned</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
     <!-- IMMAGINI -->
