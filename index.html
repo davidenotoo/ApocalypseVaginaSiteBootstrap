@@ -305,6 +305,148 @@
         .marg {
             margin-bottom: 50vh;
         }
+
+        /* SEZIONE CARD */
+        #cardOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+
+            width: 300px;
+            /* Personalizza la larghezza della card secondo necessità */
+            background: #1b1f22;
+            color: #dee2e6;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: inherit;
+            /* Utilizza il colore del testo definito per il contenitore padre */
+            text-decoration: none;
+            /* Rimuove la sottolineatura del link */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+        }
+
+        .link img {
+            width: 30px;
+            /* Personalizza la larghezza del logo del link secondo necessità */
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .btn-custom {
+            background-color: #a6ff00;
+            border-color: #a6ff00;
+            color: black;
+            margin-right: 30vw;
+            margin-left: 30vw;
+            /* Modifica il colore del testo secondo necessità */
+            font-family: 'MiedingerW01-Bold';
+        }
+
+        .btn-custom:hover {
+            background-color: #87cc00;
+            /* Cambia colore durante il passaggio del mouse */
+            border-color: #87cc00;
+            color: white;
+            /* Modifica il colore del testo secondo necessità */
+        }
+
+        .cent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link a {
+            color: inherit;
+            /* Utilizza il colore del testo definito per il contenitore padre */
+            text-decoration: none;
+            /* Rimuove la sottolineatura del link */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+        }
+
+        .custom-button {
+            background-color: #ffffff;
+            /* Colore di sfondo bianco */
+            border: 1px solid #cccccc;
+            /* Bordo grigio */
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            /* Spaziatura interna */
+            margin: 5px;
+            /* Margine esterno */
+            cursor: pointer;
+            /* Cambia il cursore al passaggio del mouse */
+            border-radius: 8px;
+        }
+
+        /* X CLOSE */
+        .custom-close {
+            cursor: pointer;
+            position: relative;
+            width: 30px;
+            height: 30px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .x-mark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 2px;
+            background-color: red;
+        }
+
+        .line1 {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+
+        .line2 {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transform: rotate(-45deg);
+        }
     </style>
 </head>
 
@@ -352,6 +494,137 @@
             class="embed-responsive-item" frameborder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
+
+
+
+    <!-- BUTTON E LINK MUSIC -->
+
+    <button type="button" class="btn btn-custom px-10vh" data-toggle="modal" data-target="#cardModal">PHONK</button>
+    <!-- Modal -->
+    <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cardModalLabel">Out Now >> PHONK
+
+                    </h5>
+                    <div class="custom-close" data-dismiss="modal" aria-label="Close">
+                        <div class="circle"></div>
+                        <div class="x-mark">
+                            <span class="line1"></span>
+                            <span class="line2"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+
+                    <!-- immagine phonk presa da elementi spotify -->
+                    <!-- <img aria-hidden="false" draggable="false" loading="lazy"
+                        src="https://i.scdn.co/image/ab67616d00001e02b9fde083a196f420562f1ff6" alt="Phonk"
+                        class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj"
+                        srcset="https://i.scdn.co/image/ab67616d00001e02b9fde083a196f420562f1ff6 150w, https://i.scdn.co/image/ab67616d00001e02b9fde083a196f420562f1ff6 300w, https://i.scdn.co/image/ab67616d0000b273b9fde083a196f420562f1ff6 320w, https://i.scdn.co/image/ab67616d0000b273b9fde083a196f420562f1ff6 640w"
+                        sizes="(min-width: 1280px) 232px, 192px"> -->
+
+                    <div class="link">Listen on</div>
+
+
+                    <!-- Link Spotify -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://open.spotify.com/intl-it/track/3INLtncWi2teqXPMQ1GzQd?si=f3d7e72c544f4b15', '_blank')">
+                        <img src="img/icon/spotify.png" alt="Logo Spotify">
+                        <span>Spotify</span>
+                    </div>
+
+                    <!-- Link Amazon Music -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://music.amazon.com/albums/B0CC5QY8JD?marketplaceId=APJ6JRA9NG5V4&musicTerritory=IT&ref=dm_sh_Laz8jJMR3KngLaUnP72T1zV8E&trackAsin=B0CC5NL2L8', '_blank')">
+                        <img src="img/icon/amazonM.png" alt="Logo Amazon Music">
+                        <span>Amazon Music</span>
+                    </div>
+
+                    <!-- Link Youtube Music -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://music.youtube.com/watch?v=A-1YkSiZW1o&si=jWJLWxl1TAGvGDn0', '_blank')">
+                        <img src="img/icon/youtubeM.png" alt="Logo YouTube Music">
+                        <span>YouTube Music</span>
+                    </div>
+
+                    <!-- Esempio con Deezer -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://deezer.page.link/HGynRoqPY1G7rXDG7', '_blank')">
+                        <img src="img/icon/deezer.png" alt="Logo Deezer">
+                        <span>Deezer</span>
+                    </div>
+
+                    <!-- Esempio con YouTube -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://youtu.be/A-1YkSiZW1o?si=Y3zUCYEZ3hCLpPIV', '_blank')">
+                        <img src="img/icon/youtube.png" alt="Logo YouTube">
+                        <span>YouTube</span>
+                    </div>
+
+                    <!-- Esempio con TIDAL -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://listen.tidal.com/album/305410028/track/305410030', '_blank')">
+                        <img src="img/icon/tidal.png" alt="Logo TIDAL">
+                        <span>TIDAL</span>
+                    </div>
+
+                    <!-- Esempio con SoundCloud -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://soundcloud.com/apocalypsevagina/phonk?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing', '_blank')">
+                        <img src="img/icon/soundcloud.png" alt="Logo SoundCloud">
+                        <span>SoundCloud</span>
+                    </div>
+
+                    <!-- Esempio con Napster -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://play.napster.com/album/alb.4171689674042332?ocode=social_user&pcode=social_user&cpath=Link&rsrc=video', '_blank')">
+                        <img src="img/icon/napster.png" alt="Logo Napster">
+                        <span>Napster</span>
+                    </div>
+
+                    <!-- Esempio con Anghami -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://open.anghami.com/wPTKdLdNlGb', '_blank')">
+                        <img src="img/icon/anghami.png" alt="Logo Anghami">
+                        <span>Anghami</span>
+                    </div>
+
+                    <!-- Esempio con Boomplay -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://www.boomplay.com/songs/133920394', '_blank')">
+                        <img src="img/icon/boomplay.png" alt="Logo Boomplay">
+                        <span>Boomplay</span>
+                    </div>
+
+                    <!-- Esempio con Pandora -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://www.pandora.com/TR:99964053', '_blank')">
+                        <img src="img/icon/pandora.png" alt="Logo Pandora">
+                        <span>Pandora</span>
+                    </div>
+
+                    <!-- Esempio con Amazon -->
+                    <div class="link custom-button"
+                        onclick="window.open('https://www.amazon.com/dp/B0CC5PM9YS', '_blank')">
+                        <img src="img/icon/amazonS.png" alt="Logo Amazon">
+                        <span>Amazon</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
 
     <!-- TESTO1 -->
@@ -472,6 +745,22 @@
                     navbarSecondary.classList.add("scrolled");
                 } else {
                     navbarSecondary.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            var cardOverlay = document.getElementById("cardOverlay");
+            var openCardButton = document.getElementById("openCardButton");
+
+            openCardButton.addEventListener("click", function () {
+                cardOverlay.style.display = "flex";
+            });
+
+            cardOverlay.addEventListener("click", function (event) {
+                if (event.target === cardOverlay) {
+                    cardOverlay.style.display = "none";
                 }
             });
         });
