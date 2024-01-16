@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Apopcalypse Vagina</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -119,7 +120,7 @@
 
         #spotify-player {
             margin-top: 10vh;
-            margin-bottom: 100px;
+            margin-bottom: 10px;
             border-radius: 12px;
             width: 100%;
         }
@@ -361,8 +362,10 @@
             color: black;
             margin-right: 30vw;
             margin-left: 30vw;
-            /* Modifica il colore del testo secondo necessità */
+            margin-bottom: 10vh;
             font-family: 'MiedingerW01-Bold';
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .btn-custom:hover {
@@ -378,6 +381,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         .link a {
@@ -447,6 +451,45 @@
             background-color: white;
             transform: rotate(-45deg);
         }
+
+        /* MINIPPLAYER */
+        .miniplayer {
+            color: #ffffff;
+            text-decoration: solid;
+        }
+
+        .card {
+            max-width: 100%;
+        }
+
+        .card-title {
+            font-family: 'MiedingerW01-Bold', sans-serif !important;
+        }
+
+        .card-body {
+            text-align: center;
+            /* Se vuoi centrare il testo nella card-body */
+        }
+
+        audio {
+            max-width: 100%;
+            /* Impedisce al tag audio di superare la larghezza della card */
+        }
+
+        audio::-webkit-media-controls-time-remaining {
+            display: none;
+            /* Nasconde il tempo di avanzamento in Chrome e Safari */
+        }
+
+        audio::-moz-media-controls-time-remaining {
+            display: none;
+            /* Nasconde il tempo di avanzamento in Firefox */
+        }
+
+        audio::-ms-media-controls-time-remaining {
+            display: none;
+            /* Nasconde il tempo di avanzamento in Microsoft Edge */
+        }
     </style>
 </head>
 
@@ -475,19 +518,47 @@
 
 
     <!-- VIDEO -->
-    <video src="video/videoRuotato.mp4" class="video" autoplay muted playsinline loop></video>
+    <video src="video/videoRuotato.mp4" class="video" autoplay muted playsinline loop preload="auto"></video>
 
-
-    <!-- LOGO -->
-    <!-- <img src="img/loghi/logo_bianco.png" class="img-fluid" alt="img1"> -->
 
     <!-- FOTO 1 e 2 -->
     <img src="img/photo/6.JPG" class="img-fluid" alt="img6">
     <img src="img/photo/7.JPG" class="img-fluid" alt="img7">
 
+    <br><br><br>
+
+
+    <!-- MINIPLAYER SNIPPET -->
+
+    <section id="sezione1"></section>
+    <div class="card d-none d-md-block w-50 mx-auto">
+        <img src="img/loghi/logo_bianco.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Apocalypse Vagina</h5>
+            <p class="card-text">Wake up and run (album snippet)</p>
+            <audio controls>
+                <source src="music/example.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+    <div class="card d-block d-md-none w-75 mx-auto">
+        <img src="img/loghi/logo_bianco.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Apocalypse vagina</h5>
+            <p class="card-text">Wake up and run (album snippet)</p>
+            <audio controls>
+                <source src="music/example.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+
+
+
+
 
     <!-- player di SPOTIFY -->
-    <section id="sezione1"></section>
     <div id="mini-player-section music" class="embed-responsive embed-responsive-16by9">
         <iframe id="spotify-player"
             src="https://open.spotify.com/embed/album/1Kvnyu1qqE80Dik6rB3m7X?utm_source=generator&theme=0"
@@ -499,7 +570,8 @@
 
     <!-- BUTTON E LINK MUSIC -->
 
-    <button type="button" class="btn btn-custom px-10vh" data-toggle="modal" data-target="#cardModal">PHONK</button>
+    <button type="button" class="btn btn-custom px-10vh" data-toggle="modal" data-target="#cardModal">OTHER
+        PLAYERS</button>
     <!-- Modal -->
     <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel"
         aria-hidden="true">
@@ -520,12 +592,6 @@
                 </div>
                 <div class="modal-body">
 
-                    <!-- immagine phonk presa da elementi spotify -->
-                    <!-- <img aria-hidden="false" draggable="false" loading="lazy"
-                        src="https://i.scdn.co/image/ab67616d00001e02b9fde083a196f420562f1ff6" alt="Phonk"
-                        class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj"
-                        srcset="https://i.scdn.co/image/ab67616d00001e02b9fde083a196f420562f1ff6 150w, https://i.scdn.co/image/ab67616d00001e02b9fde083a196f420562f1ff6 300w, https://i.scdn.co/image/ab67616d0000b273b9fde083a196f420562f1ff6 320w, https://i.scdn.co/image/ab67616d0000b273b9fde083a196f420562f1ff6 640w"
-                        sizes="(min-width: 1280px) 232px, 192px"> -->
 
                     <div class="link">Listen on</div>
 
@@ -718,7 +784,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
 
