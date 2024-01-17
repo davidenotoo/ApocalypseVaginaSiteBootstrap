@@ -10,7 +10,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- favicon -->
-    <link rel="icon" href="img/icon/favicon.ico">
+    <link rel="icon" href="img/icon/favicon2.ico">
 
     <!-- Manifest per PWA -->
     <link rel="manifest" href="manifest.json">
@@ -83,7 +83,6 @@
 
         .video {
             padding-top: 70px;
-            padding-bottom: 10vh;
             width: 100%;
             height: 100%;
         }
@@ -201,12 +200,22 @@
 
             .video {
                 padding-top: 20vh;
+                padding-bottom: 10px;
             }
 
             /* hide PC version on smaller screens */
             .pc-version {
                 display: none;
             }
+
+            .parole .word {
+                margin-right: 0;
+                margin-bottom: 5px;
+                /* Aggiungi spazio tra le parole su dispositivi mobili */
+            }
+            .parole h2 {
+            font-size: 9px; /* Riduci la dimensione del testo su dispositivi mobili */
+        }
         }
 
         #mini-player-section {
@@ -512,9 +521,17 @@
         .testo1,
         .testo2 {
             color: #bfbfbf;
-            margin-left: 10vw;
-            margin-right: 10vw;
+            margin-left: 25%;
+            margin-right: 25%;
             font-size: large;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .testo1 {
+            padding-top: 10vh;
         }
 
         .testo2 {
@@ -525,6 +542,22 @@
         .font {
             color: #bfbfbf;
             font-family: 'MiedingerW01-Bold', sans-serif !important;
+        }
+
+        .parole {
+            text-align: center;
+            /* Centra il testo all'interno del blocco */
+            padding: 0 10px; /* Aggiunge padding ai lati del blocco */
+
+        }
+
+        .parole h2 {
+            white-space: nowrap;
+            /* Impedisce alle parole di andare a capo */
+            overflow: hidden;
+            /* Nasconde le parole che non entrano nello spazio disponibile */
+            text-overflow: ellipsis;
+            /* Aggiunge i puntini di sospensione se il testo è troncato */
         }
     </style>
 </head>
@@ -557,16 +590,47 @@
     <video src="video/videoRuotato.mp4" class="video" autoplay muted playsinline loop preload="auto"></video>
 
 
+    <div class="parole cent font">
+        <h2>LOVE DESPAIR CRY RUN DESTROY JUST BREATH.</h2>
+    </div>
+
     <!-- FOTO 1 e 2 -->
     <img src="img/photo/first.JPG" class="img-fluid" alt="img6">
     <img src="img/photo/7.JPG" class="img-fluid" alt="img7">
 
+    <!-- TESTO1 -->
+    <div class="testo1 ">
+        <p>
+            Apocalypse Vagina is electronic music
+            Apocalypse Vagina is not only about music
+            <br><br>
 
+            It's about the emotions of our fragile generation, marked by uncertainty, yet unbroken <br> and capable
+            of rebirth
+            <br><br>
 
-    <!-- FIXME: -->
-    <!-- Modificare <br> -->
-    <br><br><br>
-    <br><br><br>
+            We are in connection with all the souls out there who have experienced a personal apocalypse
+            <br><br>
+
+            We want to inject new energy to emerge from this, as life is a place where one can always be born
+            again
+        </p>
+        </p>
+    </div>
+
+    <!-- TESTO2 -->
+    <div class="testo2 ">
+        <p>
+            Our music is a fusion of analog synth and computer music, inspired by Jungle,
+            Techno,<br>
+            Future Bass, Dark Synth, and Ambient.
+
+            <br><br>
+            Our live performance, composed by analog synthesizers, drumset and controllers,<br> transports listeners to
+            a dystopian dimension though deep harmonics, contraste <br> by
+            the rhythmic foundations that exude energy and confiden
+        </p>
+    </div>
 
     <!-- MINIPLAYER SNIPPET VERSIONE PC -->
     <div class="card mb-3 d-md-block w-50 mx-auto pc-version" style="background-color: #2e2e2e;">
@@ -741,42 +805,7 @@
 
 
 
-    <!-- TESTO1 -->
-    <div class="testo1 cent">
-        <p>
-            Apocalypse Vagina is electronic music
-            Apocalypse Vagina is not only about music
-        </p>
-        <p>
-            It's about the emotions of our fragile generation, marked by uncertainty, yet unbroken and capable
-            of rebirth
-        </p>
-        <p>
-            We are in connection with all the souls out there who have experienced a personal apocalypse
-        <p>
 
-            We want to inject new energy to emerge from this, as life is a place where one can always be born
-            again
-        </p>
-        </p>
-    </div>
-
-    <!-- TESTO2 -->
-    <div class="testo2 cent">
-        <p></p>
-        <p>
-            Our music is a fusion of analog synth and computer music, inspired by Jungle,
-            Techno,
-            Future Bass, Dark Synth, and Ambient.
-        </p>
-        <p>
-            Our live performance, composed by analog synthesizers, drum
-            set
-            and controllers,<br> transports listeners to a dystopian dimension though deep harmonics, contrasted by
-            the
-            rhythmic foundations that exude energy and confiden
-        </p>
-    </div>
 
 
 
