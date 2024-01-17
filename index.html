@@ -116,6 +116,14 @@
         #mini-player-section {
             text-align: center;
             padding: 20px;
+            padding-left: 40vw;
+            padding-right: 40vw;
+        }
+
+        #mini-player-section #spotify-player {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #spotify-player {
@@ -164,6 +172,11 @@
                 align-items: center;
             }
 
+            /* hide phone version on larger screens */
+            .phone-version {
+                display: none;
+            }
+
         }
 
 
@@ -188,6 +201,11 @@
 
             .video {
                 padding-top: 20vh;
+            }
+
+            /* hide PC version on smaller screens */
+            .pc-version {
+                display: none;
             }
         }
 
@@ -452,7 +470,7 @@
             transform: rotate(-45deg);
         }
 
-        /* MINIPPLAYER */
+        /* MINI PLAYER */
         .miniplayer {
             color: #ffffff;
             text-decoration: solid;
@@ -490,6 +508,24 @@
             display: none;
             /* Nasconde il tempo di avanzamento in Microsoft Edge */
         }
+
+        .testo1,
+        .testo2 {
+            color: #bfbfbf;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            font-size: large;
+        }
+
+        .testo2 {
+            margin-top: 5vh;
+            margin-bottom: 10vh;
+        }
+
+        .font {
+            color: #bfbfbf;
+            font-family: 'MiedingerW01-Bold', sans-serif !important;
+        }
     </style>
 </head>
 
@@ -522,36 +558,54 @@
 
 
     <!-- FOTO 1 e 2 -->
-    <img src="img/photo/6.JPG" class="img-fluid" alt="img6">
+    <img src="img/photo/first.JPG" class="img-fluid" alt="img6">
     <img src="img/photo/7.JPG" class="img-fluid" alt="img7">
 
+
+
+    <!-- FIXME: -->
+    <!-- Modificare <br> -->
+    <br><br><br>
     <br><br><br>
 
-
-    <!-- MINIPLAYER SNIPPET -->
-
-    <section id="sezione1"></section>
-    <div class="card d-none d-md-block w-50 mx-auto">
-        <img src="img/loghi/logo_bianco.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Apocalypse Vagina</h5>
-            <p class="card-text">Wake up and run (album snippet)</p>
-            <audio controls>
-                <source src="music/example.mp3" type="audio/mp3">
-            </audio>
+    <!-- MINIPLAYER SNIPPET VERSIONE PC -->
+    <div class="card mb-3 d-md-block w-50 mx-auto pc-version" style="background-color: #2e2e2e;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="img/loghi/logo_bianco.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">apocalypse vagina</h5>
+                    <p class="card-text">Wake up and run (album snippet)</p>
+                    <br><br>
+                    <audio controls>
+                        <source src="music/example.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="card d-block d-md-none w-75 mx-auto">
-        <img src="img/loghi/logo_bianco.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Apocalypse vagina</h5>
-            <p class="card-text">Wake up and run (album snippet)</p>
-            <audio controls>
-                <source src="music/example.mp3" type="audio/mp3">
-            </audio>
+    <!-- MINIPLAYER SNIPPET VERSIONE PHONE -->
+    <div class="card mb-3 d-md-none w-75 mx-auto phone-version" style="background-color: #2e2e2e;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="img/loghi/logo_bianco.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">apocalypse vagina</h5>
+                    <p class="card-text">Wake up and run (album snippet)</p>
+                    <br><br>
+                    <audio controls>
+                        <source src="music/example.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
         </div>
     </div>
+
 
 
 
@@ -687,34 +741,49 @@
 
 
 
-
-
-
-
-
-
     <!-- TESTO1 -->
-    <!-- Apocalypse Vagina is electronic music
-        Apocalypse Vagina is not only about music
-        It's about the emotions of our fragile generation, marked by uncertainty, yet unbroken and capable
-        of
-        rebirth
-        We are in connection with all the souls out there who have experienced a personal apocalypse
-        We want to inject new energy to emerge from this, as life is a place where one can always be born
-        again -->
+    <div class="testo1 cent">
+        <p>
+            Apocalypse Vagina is electronic music
+            Apocalypse Vagina is not only about music
+        </p>
+        <p>
+            It's about the emotions of our fragile generation, marked by uncertainty, yet unbroken and capable
+            of rebirth
+        </p>
+        <p>
+            We are in connection with all the souls out there who have experienced a personal apocalypse
+        <p>
 
+            We want to inject new energy to emerge from this, as life is a place where one can always be born
+            again
+        </p>
+        </p>
+    </div>
 
     <!-- TESTO2 -->
-    <!-- Our music is a fusion of analog synth and computer music, inspired by Jungle,
+    <div class="testo2 cent">
+        <p></p>
+        <p>
+            Our music is a fusion of analog synth and computer music, inspired by Jungle,
             Techno,
-            Future Bass, Dark Synth, and Ambient. Our live performance, composed by analog synthesizers, drum
+            Future Bass, Dark Synth, and Ambient.
+        </p>
+        <p>
+            Our live performance, composed by analog synthesizers, drum
             set
-            and controllers, transports listeners to a dystopian dimension though deep harmonics, contrasted by
+            and controllers,<br> transports listeners to a dystopian dimension though deep harmonics, contrasted by
             the
-            rhythmic foundations that exude energy and confiden -->
+            rhythmic foundations that exude energy and confiden
+        </p>
+    </div>
+
+
+
 
 
     <!-- DATES EVENTI -->
+    <h1 class="cent font"> Dates</h1>
     <section id="sezione2" class="text-white py-5 marg">
         <div class="container text-center">
             <!-- Evento 1 -->
@@ -723,7 +792,7 @@
                     <h2>22 LUG 2023</h2>
                     <div class="border-bottom pb-3">
                         <h4>NUVALA FEST</h4>
-                        <p>Masseria Cimadomo, Puglia, Italy</p>
+                        <p>Masseria Cimadomo, Apulia, Italy</p>
                         <a href="#" class="text-white">DETAILS</a>
                     </div>
                 </div>
