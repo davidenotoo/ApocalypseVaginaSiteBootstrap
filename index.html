@@ -33,24 +33,17 @@
             justify-content: center;
         }
 
-        /* Stile del "track" della barra di scorrimento (lo sfondo) */
         ::-webkit-scrollbar {
             width: 12px;
-            /* Larghezza della barra di scorrimento */
         }
 
-        /* Stile del "thumb" della barra di scorrimento (la parte mobile) */
         ::-webkit-scrollbar-thumb {
             background-color: #bfbfbf;
-            /* Colore della barra di scorrimento */
             border-radius: 10px;
-            /* Bordo arrotondato */
         }
 
-        /* Stile del "track" della barra di scorrimento (lo sfondo) */
         ::-webkit-scrollbar-track {
             background-color: transparent;
-            /* Colore trasparente */
         }
 
         .ll {
@@ -67,7 +60,6 @@
 
         .bg-custom {
             background-color: #000;
-            /* Colore di base */
             font-family: 'MiedingerW01-Bold', sans-serif !important;
             color: white;
             transition: background-color 0.5s ease;
@@ -76,9 +68,7 @@
 
         .bg-custom.scrolled {
             background-color: #a6ff00;
-            /* Colore finale */
             opacity: 0.8;
-            /* Opacità finale */
         }
 
         .video {
@@ -156,7 +146,6 @@
                 padding-top: 110px;
             }
 
-            /* rimozione del curisor pointer automatico */
             .bb:hover {
                 cursor: default;
             }
@@ -171,7 +160,6 @@
                 align-items: center;
             }
 
-            /* hide phone version on larger screens */
             .phone-version {
                 display: none;
             }
@@ -569,6 +557,11 @@
             text-overflow: ellipsis;
             /* Aggiunge i puntini di sospensione se il testo è troncato */
         }
+
+        /* FOOTER */
+        footer{
+            margin-bottom: 2vh;
+        }
     </style>
 </head>
 
@@ -642,6 +635,7 @@
         </p>
     </div>
 
+    <section id="sezione1"></section>
     <!-- MINIPLAYER SNIPPET VERSIONE PC -->
     <div class="card mb-3 d-md-block w-50 mx-auto pc-version" style="background-color: #2e2e2e;">
         <div class="row g-0">
@@ -877,6 +871,57 @@
     <img src="img/photo/4.JPG" class="img-fluid" alt="img4">
     <img src="img/photo/5.JPG" class="img-fluid" alt="img5">
 
+
+
+   <!-- FOOTER -->
+
+<!-- <footer>
+    <nav class="navbar navbar-expand-lg fixed-bottom navbar-scroll">
+        <div class="container-fluid cent">
+            <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="d-flex justify-content-start align-items-center">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="mailto:apocalypsevagine@gmail.com">apocalypsevagine@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=".." rel="nofollow" target="_blank">© 2024: Apocalypse Vagina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://www.instagram.com/apocalypsevagina?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank"><img src="img/icon/iconIG.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer> -->
+
+
+<!-- FOOTER -->
+<footer class="fixed-bottom">
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-4 text-center">
+                <a class="nav-link" href="mailto:apocalypsevagine@gmail.com"><img src="img/icon/iconMail.png" alt="apocalypsevagine@gmail.com"></a>
+            </div>
+            <div class="col-4 text-center">
+                <a class="nav-link" href="" rel="nofollow" target="_blank">©2024: ApocalypseVagina</a>
+            </div>
+            <div class="col-4 text-center">
+                <a class="nav-link"
+                    href="https://www.instagram.com/apocalypsevagina?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"><img src="img/icon/iconIG.png" alt="InstagramLink"></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 
